@@ -1,0 +1,27 @@
+{
+  "name": "game-koa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "GitHub9Z",
+  "license": "MIT",
+  "scripts": {
+    "run-db": "sudo ./db/mongodb-macos-x86_64-4.2.8/bin/mongod --dbpath=./db/data",
+    "run-db-cloud": "sudo ../game-koa-local/db/mongodb-linux-x86_64-rhel70-4.4.0/bin/mongod --dbpath=./db/data",
+    "serve": "sudo node index_https.js"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.9",
+    "download": "^8.0.0",
+    "fs": "^0.0.1-security",
+    "js-to-java": "^2.7.0",
+    "koa-route": "^3.2.0",
+    "koa-sslify": "^4.0.3",
+    "koa-static": "^5.0.0",
+    "koa2": "^2.0.0-alpha.7",
+    "koa2-cors": "^2.0.6",
+    "koa2-request": "^1.0.4",
+    "mongoose": "^5.9.18",
+    "nacos": "^2.5.0",
+    "node-zookeeper-dubbo": "^3.0.15"
+  }
+}
