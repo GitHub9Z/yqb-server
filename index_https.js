@@ -23,11 +23,10 @@ Koa.prototype.$route = route
 const app = new Koa()
 Koa.prototype.user_pool = []
 app.use(compress(gzip_opt))
-
+app.use(serve(__dirname + "/pages"))
 app.use(sslify())
 app.use(cors())
 app.use(token_check)
-app.use(serve(__dirname + "/pages"))
 api_loader(app)
 
 https.createServer(options, app.callback()).listen(443, (err) => {
