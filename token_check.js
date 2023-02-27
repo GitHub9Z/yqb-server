@@ -17,7 +17,7 @@ async function check(ctx, next) {
         }
     }
     // 如果是登陆页面和注册页面就不需要验证token了
-    if (!url.includes(yqb)) {
+    if (!url.includes('yqb')) {
         await next()
     } if (url === '/yqb/user/LOGIN' || url === '/yqb/user/SMS') {
         await next()
