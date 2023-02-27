@@ -1,0 +1,24 @@
+.DS_Store
+# db
+node_modules
+db/data
+db/mongodb-macos-x86_64-4.2.8
+db/mongodb-linux-x86_64-rhel70-4.4.0
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

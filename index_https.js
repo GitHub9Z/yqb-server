@@ -3,6 +3,7 @@ const api_loader = require('./api')
 const https = require('https')
 const fs = require('fs')
 const sslify = require('koa-sslify').default
+const serve = require("koa-static")
 
 // 路由
 const route = require('koa-route')
@@ -26,6 +27,7 @@ app.use(compress(gzip_opt))
 app.use(sslify())
 app.use(cors())
 app.use(token_check)
+app.use(serve(__dirname + "/pages"))
 api_loader(app)
 
 https.createServer(options, app.callback()).listen(443, (err) => {
