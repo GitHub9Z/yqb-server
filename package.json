@@ -14,6 +14,7 @@
     "download": "^8.0.0",
     "fs": "^0.0.1-security",
     "js-to-java": "^2.7.0",
+    "koa-bodyparser": "^4.3.0",
     "koa-route": "^3.2.0",
     "koa-sslify": "^4.0.3",
     "koa-static": "^5.0.0",
