@@ -11,6 +11,7 @@ const cors = require('koa2-cors')
 const token_check = require('./token_check')
 const compress = require('koa-compress');
 const gzip_opt = { threshold: 2048 };
+const bodyParser = require('koa-bodyparser')
 
 
 const options = {
@@ -25,6 +26,7 @@ Koa.prototype.user_pool = []
 app.use(compress(gzip_opt))
 app.use(serve(__dirname + "/pages"))
 app.use(sslify())
+app.use(bodyParser())
 app.use(cors())
 app.use(token_check)
 api_loader(app)
