@@ -23,7 +23,7 @@ const options = {
 Koa.prototype.$route = route
 const app = new Koa()
 Koa.prototype.user_pool = []
-app.use(new bodyParser())
+app.use(bodyParser())
 app.use(compress(gzip_opt))
 app.use(serve(__dirname + "/pages"))
 app.use(sslify())

@@ -12,6 +12,7 @@ let jsonote_web_api_loader = app => {
      * 
      */
     app.use(app.$route.all('/jsonote/web/create', async function (ctx) {
+        console.log('觉了', ctx.request.body)
         const {
             id,
             json
