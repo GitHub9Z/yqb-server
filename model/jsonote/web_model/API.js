@@ -16,7 +16,7 @@ let jsonote_web_api_loader = app => {
         const {
             id,
             json
-        } = ctx.request.body
+        } = ctx.request.body || {}
         const git_id = common_DAO.randomString(32)
         await jsonote_git_DAO.create_git({
             id: git_id,
